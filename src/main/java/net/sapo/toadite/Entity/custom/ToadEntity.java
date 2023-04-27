@@ -29,7 +29,7 @@ public class ToadEntity extends AnimalEntity implements GeoEntity {
     public static DefaultAttributeContainer.Builder setAttributes() {
         return AnimalEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 8.0D)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.4f);
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.2f);
         // Add to attack entities
         // .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 4.0f)
         // .add(EntityAttributes.GENERIC_ATTACK_SPEED, 2.0f)
