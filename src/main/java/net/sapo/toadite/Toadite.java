@@ -8,6 +8,7 @@ import net.sapo.toadite.Entity.ModEntities;
 import net.sapo.toadite.Entity.custom.ToadEntity;
 import net.sapo.toadite.Item.ModItemGroups;
 import net.sapo.toadite.Item.ModItems;
+import net.sapo.toadite.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import software.bernie.geckolib.GeckoLib;
@@ -22,6 +23,7 @@ public class Toadite implements ModInitializer {
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
         ModBlocks.registerModBlocks();
+        ModWorldGeneration.generateWorldGen();
 
         FabricDefaultAttributeRegistry.register(ModEntities.TOAD, ToadEntity.setAttributes());
         LOGGER.info("Mod is initialized");

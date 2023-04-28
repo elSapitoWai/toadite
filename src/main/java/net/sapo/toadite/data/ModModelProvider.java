@@ -7,6 +7,7 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.ModelIds;
 import net.minecraft.data.client.Models;
 import net.minecraft.item.ItemStack;
+import net.sapo.toadite.Block.ModBlocks;
 import net.sapo.toadite.Item.ModItems;
 
 public class ModModelProvider extends FabricModelProvider {
@@ -17,6 +18,9 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerParentedItemModel(ModItems.TOAD_SPAWN_EGG, ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
+
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.TOADITE_ORE);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.DEEPSLATE_TOADITE_ORE);
     }
 
     @Override
