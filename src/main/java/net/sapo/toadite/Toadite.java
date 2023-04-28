@@ -3,6 +3,7 @@ package net.sapo.toadite;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.sapo.toadite.Block.ModBlocks;
 import net.sapo.toadite.Entity.ModEntities;
 import net.sapo.toadite.Entity.custom.ToadEntity;
 import net.sapo.toadite.Item.ModItemGroups;
@@ -20,6 +21,7 @@ public class Toadite implements ModInitializer {
 
         ModItemGroups.registerItemGroups();
         ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 
         FabricDefaultAttributeRegistry.register(ModEntities.TOAD, ToadEntity.setAttributes());
         LOGGER.info("Mod is initialized");

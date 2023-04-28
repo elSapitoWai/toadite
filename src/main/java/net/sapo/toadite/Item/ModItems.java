@@ -16,6 +16,7 @@ import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Mod;
 public class ModItems {
     public static final Item TOAD_SPAWN_EGG = registerItem("toad_spawn_egg", new SpawnEggItem(ModEntities.TOAD,
             0x462c11, 0x464111, new FabricItemSettings()));
+    public static final Item TOADITE = registerItem("toadite", new Item(new FabricItemSettings()));
 
     public static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Toadite.MODID, name), item);
@@ -23,6 +24,7 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         addToItemGroup(ModItemGroups.TOADITE, TOAD_SPAWN_EGG);
+        addToItemGroup(ModItemGroups.TOADITE, TOADITE);
     }
 
     private static void addToItemGroup(ItemGroup group, Item item) {
